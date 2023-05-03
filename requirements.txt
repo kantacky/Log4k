@@ -1,0 +1,5 @@
+discord.py
+python-dotenv
+pyyaml
+requests
+slack_bolt

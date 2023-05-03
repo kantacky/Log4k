@@ -1,0 +1,5 @@
+docker.sh
+.DS_Store
+.git/
+.gitignore
+README.md
