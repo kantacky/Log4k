@@ -1,4 +1,3 @@
-import config
 from datetime import datetime
 from slack_bolt import App
 
