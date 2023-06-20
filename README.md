@@ -7,12 +7,6 @@
 ## .config.yml
 ```
 services:
-    discord:
-        server_name:
-            token: token
-            channels:
-                channel_name: channel_id
-    
     slack:
         workspace_name:
             user_oauth_token: user_oauth_token
