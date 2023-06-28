@@ -4,8 +4,6 @@ RUN apt-get update
 RUN apt-get install -y cron
 RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
-RUN chmod +x /etc/cron.d/cron
-
 RUN mkdir /app
 WORKDIR /app
 COPY . .
