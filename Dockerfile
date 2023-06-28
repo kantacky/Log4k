@@ -4,10 +4,12 @@ RUN apt-get update
 RUN apt-get install -y cron
 RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
+RUN chmod +x /etc/cron.d/cron
+
 RUN mkdir /app
 WORKDIR /app
 COPY . .
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -U pip
+RUN pip install -Ur requirements.txt
 
 CMD cron -f
