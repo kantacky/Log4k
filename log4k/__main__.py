@@ -9,7 +9,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.date:
-        date = datetime(year=int(args.date[:5]), month=int(args.date[5:7]), day=int(args.date[7:]))
+        date = datetime(year=int(args.date[:4]), month=int(args.date[4:6]), day=int(args.date[6:]))
 
     try:
         page_id = getDailyLogId(date)
