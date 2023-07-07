@@ -8,13 +8,16 @@ if __name__ == '__main__':
     parser.add_argument('-D', '--date', type=str, help='Date of the Log')
     args = parser.parse_args()
 
-    if args.date:
-        date = datetime(year=int(args.date[:4]), month=int(args.date[4:6]), day=int(args.date[6:]))
-
     try:
-        page_id = getDailyLogId(date)
+        if args.date:
+            date = datetime(year=int(args.date[:4]), month=int(args.date[4:6]), day=int(args.date[6:]))
+            page_id = getDailyLogId(date)
+        else:
+            page_id = getDailyLogId()
+        breakpoint()
         blocks = getDailyLogContentBlocks(page_id)
-        executeSlackPost(blocks)
+        breakpoint()
+        # executeSlackPost(blocks)
         print(f"{datetime.now().strftime('%Y-%m-%dT%H:%M:%S+0900')} Success")
     except Exception as e:
         print(f"{datetime.now().strftime('%Y-%m-%dT%H:%M:%S+0900')} Error: {e}")
