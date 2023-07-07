@@ -1,4 +1,4 @@
-import config
+from log4k import config
 from datetime import datetime
 import requests
 

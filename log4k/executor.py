@@ -1,4 +1,4 @@
-import config
+from log4k import config
 from log4k.slack_client import convertToSlackBlocks, postToSlackChannel
 
 def executeSlackPost(blocks):
