@@ -1,14 +1,14 @@
 from datetime import datetime
 from slack_bolt import App
 
-def convertToSlackBlocks(blocks):
+def convertToSlackBlocks(blocks, date: datetime = datetime.today()):
     slack_blocks = []
 
     slack_blocks.append({
         'type': 'header',
         'text': {
             'type': 'plain_text',
-            'text': datetime.today().strftime('%Y-%m-%d'),
+            'text': date.strftime('%Y-%m-%d'),
         }
     })
 

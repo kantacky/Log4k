@@ -12,9 +12,10 @@ if __name__ == '__main__':
         if args.date:
             date = datetime(year=int(args.date[:4]), month=int(args.date[4:6]), day=int(args.date[6:]))
             page_id = getDailyLogId(date)
+            blocks = getDailyLogContentBlocks(page_id, date)
         else:
             page_id = getDailyLogId()
-        blocks = getDailyLogContentBlocks(page_id)
+            blocks = getDailyLogContentBlocks(page_id)
         executeSlackPost(blocks)
         print(f"{datetime.now().strftime('%Y-%m-%dT%H:%M:%S+0900')} Success")
     except Exception as e:
