@@ -15,4 +15,19 @@ services:
                 channel_name: channel_id
 ```
 
+## cron.d/cron_file
+```
+chmod 755 ./cron.d/cron_file
+```
+
+## Execute
+```
+python -m log4k
+```
+
+If you would like to specify the date (Example: July 1st, 2023):
+```
+python -m log4k -D 20230701
+```
+
 &copy; 2023 Kanta Oikawa

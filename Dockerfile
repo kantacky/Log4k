@@ -10,4 +10,7 @@ COPY . .
 RUN pip install -U pip
 RUN pip install -Ur requirements.txt
 
-CMD cron -f
+ADD cron.d /etc/cron.d/
+RUN chmod 0644 /etc/cron.d/*
+
+CMD cron && tail -f /dev/null
