@@ -14,10 +14,8 @@ if __name__ == '__main__':
             page_id = getDailyLogId(date)
         else:
             page_id = getDailyLogId()
-        breakpoint()
         blocks = getDailyLogContentBlocks(page_id)
-        breakpoint()
-        # executeSlackPost(blocks)
+        executeSlackPost(blocks)
         print(f"{datetime.now().strftime('%Y-%m-%dT%H:%M:%S+0900')} Success")
     except Exception as e:
         print(f"{datetime.now().strftime('%Y-%m-%dT%H:%M:%S+0900')} Error: {e}")
