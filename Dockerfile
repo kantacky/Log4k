@@ -10,7 +10,7 @@ COPY . .
 RUN pip install -U pip
 RUN pip install -Ur requirements.txt
 
-ADD cron.d /etc/cron.d/
+RUN echo '00 23 * * * root cd /app/log4k && python -m log4k >> /var/log/python.log' >> /etc/cron.d/log4k
 RUN chmod 0644 /etc/cron.d/*
 
 CMD cron && tail -f /dev/null

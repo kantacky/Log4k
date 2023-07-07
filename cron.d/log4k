@@ -1,1 +1,0 @@
-00 23 * * * root cd /app/log4k && python -m log4k >> /var/log/python.log
