@@ -1,5 +1,5 @@
 import config
-from log4k import convertToSlackBlocks, postToSlackChannel
+from log4k.slack_client import convertToSlackBlocks, postToSlackChannel
 
 def executeSlackPost(blocks):
     content = convertToSlackBlocks(blocks)

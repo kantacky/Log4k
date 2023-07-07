@@ -1,7 +1,7 @@
 from argparse import ArgumentParser
 from datetime import datetime
-from log4k import getDailyLogId, getDailyLogContentBlocks
-from log4k import executeSlackPost
+from log4k.notion_client import getDailyLogId, getDailyLogContentBlocks
+from log4k.executor import executeSlackPost
 
 if __name__ == '__main__':
     parser = ArgumentParser()
